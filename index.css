@@ -1,0 +1,273 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background: radial-gradient(circle at top, #1a032d 0%, #0a0015 100%);
+    color: #d8b4fe;
+    font-family: 'Segoe UI', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+.container{
+    width:min(900px, 90%);
+    padding:24px;
+    border-radius: 16px;
+    border:1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 25px rgba(134,61,255,0.2);
+    background: rgba(255, 255, 255, 0.05);
+}
+.start-game{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60vh;
+    animation: fadeIn    1s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+.start-game h1{
+    font-size:40px;
+    color:#c084fc;
+    text-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
+    margin-bottom:16px;
+}
+.start-button{
+    padding: 12px 28px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(90deg, #7e22ce, #9333ea);
+    border:none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
+}
+.start-button:hover{
+    transform:scale(1.05);
+    box-shadow: 0 0 25px rgba(168,85,247,0.7);
+}
+.Game-screen{
+    display:none;
+    animation: fadein 0.8s ease;
+}
+.show{
+    display: block !important;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+header h1{
+    color:#d8b4fe;
+    font-size:40px;   
+    text-align: center;
+}
+.mode-button{
+    background: linear-gradient(90deg, #6d28d9, #9333ea);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.Game-Mode {
+    display: flex;
+    justify-content: center; 
+    gap: 12px; 
+    margin-top: 15px; 
+    flex-wrap: wrap; 
+}
+.Game-Mode button {
+    background: linear-gradient(90deg, #6d28d9, #9333ea);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+  
+.Game-Mode button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+  
+.ctr {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+  
+.player-name label {
+    display: block;
+    margin: 10px 0;
+    font-weight: 500;
+    color: #c4b5fd;
+    text-align: center;
+}
+  
+.player-name input {
+    margin-left: 5px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+  
+.Scoreboard {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 16px;
+    font-size: 1.1rem;
+    color: #e9d5ff;
+}
+.Reset-Restart {
+    margin-top: 15px;
+    text-align: center;
+}
+.restartbtn, .resetbtn {
+    background: transparent;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    color: #e9d5ff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.2s ease;
+}
+  
+.restartbtn:hover, .resetbtn:hover {
+    background: rgba(147, 51, 234, 0.2);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: min(400px, 80%);
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+}
+  
+.Cell {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-size: 2.5rem;
+    color: #d8b4fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+  
+.Cell:hover {
+    background: rgba(147, 51, 234, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+  
+.text {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #c084fc;
+    font-weight: 500;
+}
+  
+.Myfooter {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #a78bfa;
+}
+  
+  
+body.light-mode {
+    background-color: white;
+    color: #2d006b;
+}
+body.light-mode .container {
+    background:#f9f9ff;
+    border: 1px solid #d1b3ff;
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.2);
+}
+body.light-mode .board{
+    background-color:white;
+    border:2px solid #c084fc;
+}
+body.light-mode .Cell {
+    background-color: white;
+    border: 2px solid #c084fc;
+    color: #3b0764;
+}
+body.light-mode .board button {
+    background-color: #fff;
+    color: #3b0764;
+    border: 2px solid #c084fc;
+}
+.board button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #d8b4fe;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+  
+body.light-mode button{
+  background: linear-gradient(90deg, #9333ea, #7e22ce);
+  color: #fff;
+}
+
+body.light-mode button:hover{
+  background: linear-gradient(90deg, #a855f7, #9333ea);
+}
+
+body.light-mode .Myfooter p {
+  color: #3b0764;
+}
+
+body.light-mode .player-name input {
+  background: #fff;
+  color: #3b0764;
+  border: 1px solid #c084fc;
+}
+  
+body.light-mode header h1{
+    color:#3b0764;
+    font-weight: 800;
+    text-shadow: none;
+}
+body.light-mode .text{
+    color:#4a148c;
+    font-weight: 600;
+}
+body.light-mode .Scoreboard div{
+    color:#3b0764;
+    font-weight: 700;
+}
+body.light-mode .player-name label{
+    color:#4a148c;
+}
+body.light-mode .Myfooter{
+    color:#4a148c;
+}
+  

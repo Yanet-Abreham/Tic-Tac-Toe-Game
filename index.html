@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Start game screen -->
+        <section id="Startgame" class="start-game">
+            <h1>Tic Tac Toe</h1><br>
+            <button id="startbutton" class="start-button">Start Game</button>
+        </section>
+        <!-- Game screen Which was hidden at first-->
+         <section id="Game" class="Game-screen">
+            <header>
+            <h1>Tic Tac Toe</h1>
+            <button id="themeToggle" class="mode-button">🌙 Dark Mode</button>
+            </header>
+            <div id="text" class="text">Choose A mode to start</div>
+            <div class="Game-Mode">
+                <button id="singleplayer" class="mode-button">Single Player</button>
+                <button id="Twoplayer" class="mode-button">Two Player</button>
+                </div>
+            <section class="ctr">
+                <div class="player-name">
+                    <label>Player 1: <input id="PlayerName" placeholder="Player 1"></label>
+                    <label>Player 2: <input id="PlayerName" placeholder="Player 2"></label>
+                </div>
+                <div class="Scoreboard">
+                    <div> X: <span id="ScoreX">0</span></div>
+                    <div> O: <span id="ScoreO">0</span></div>
+                    <div> Draws: <span id="ScoreD">0</span></div>
+                </div>
+            </section>
+            <!-- The game board -->
+            <section class="game-board">
+                <div id="board" class="board" aria-label="Tic Tac Toe Board">
+                    <button class="Cell" data-index="0"></button>
+                    <button class="Cell" data-index="1"></button>
+                    <button class="Cell" data-index="2"></button>
+                    <button class="Cell" data-index="3"></button>
+                    <button class="Cell" data-index="4"></button>
+                    <button class="Cell" data-index="5"></button>
+                    <button class="Cell" data-index="6"></button>
+                    <button class="Cell" data-index="7"></button>
+                    <button class="Cell" data-index="8"></button>
+                    </div>
+                    <!-- The reset and restart button -->
+                    <div class="Reset-Restart">
+                        <button id="Restart" class="restartbtn">Restart Round</button>
+                        <button id="Reset" class="resetbtn">Reset All</button>
+                    </div>
+            </section>
+            <footer class="Myfooter">
+                <p>@2025 Tic Tac Toe Game. All Rights Reserved. @Yanet Abreham</p>
+            </footer>
+         </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
