@@ -1,5 +1,7 @@
 🎮 Tic Tac Toe 
+
 #Features
+
     #🧑‍🤝‍🧑 Game Modes
         -Single Player Mode: Play with a friend on the same device.
         -Two Player Mode: Play against a simple AI opponent.
