@@ -270,4 +270,82 @@ body.light-mode .player-name label{
 body.light-mode .Myfooter{
     color:#4a148c;
 }
-  
+@media (max-width: 480px){
+    header h1{
+        font-size:24px;
+    }
+    #themeToggle{
+        font-size:12px;
+        padding:6px 10px;
+    }
+    .conatiner{
+        padding: 16px;
+        width:95%;
+    }
+    header h1{
+        font-size:28px;
+    }
+    .start-game h1{
+        font-size:28px;
+    }
+    .start-button, .mode-button, .restartbtn, .resetbtn{
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .board{
+        width: 90%;
+        gap:6px;
+    }
+    .cell{
+        font-size: 32px;
+    }
+    .player-name label {
+        font-size: 0.9rem;
+    }
+    
+    .Scoreboard {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 1rem;
+    }
+    
+    .text {
+        font-size: 0.9rem;
+    }
+    
+    .Myfooter {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 768px){
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 34px;
+    }
+    
+    .start-game h1 {
+        font-size: 34px;
+    }
+    
+    .start-button, .mode-button, .restartbtn, .resetbtn {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+    
+    .board {
+        width: 70%;
+        gap: 8px;
+    }
+    
+    .Cell {
+        font-size: 2.2rem;
+    }
+    
+    .Scoreboard {
+        font-size: 1.05rem;
+    }
+}
